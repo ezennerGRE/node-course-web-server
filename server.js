@@ -53,6 +53,13 @@ app.get('/bad',(req,res) => {
 	});
 });
 
+app.get('/portfolio',(req,res) => {
+	res.render('portfolio.hbs',{
+		pageTitle: 'Portfolio Page',
+		currentYear: new Date().getFullYear()
+	});
+});
+
 app.listen(port, () => {
 	console.log(`Server is up on port ${port}`); 
 });
